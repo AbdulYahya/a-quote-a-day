@@ -1,6 +1,6 @@
 const axios = require('axios');
 
-const url = 'http://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1';
+const url = 'https://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1';
 
 const quote = document.querySelector('.quote');
 const author = document.querySelector('.author');
