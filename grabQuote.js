@@ -1,11 +1,15 @@
 const axios = require('axios');
+
 const url = 'http://quotesondesign.com/wp-json/posts?filter[orderby]=rand&filter[posts_per_page]=1';
 
-axios.get(url)
+const quote = document.querySelector('.quote');
+const author = document.querySelector('.author');
+
+axios.get(url) 
   .then(function (response) {
-    console.log('QuoteOfTheDay_' + response.data[0].ID);
-    console.log(response.data[0].title);
-    console.log(response.data[0].content);
+    let quoteContent = response.data[0].content.replace(/\<p>|<\/p>/g, '');
+    quote.innerHTML = quoteContent;
+    author.innerHTML = `- ${response.data[0].title}`;
   })
   .catch(function (error) {
     console.log(error);
