@@ -10,8 +10,6 @@ fetchQuote()
   .then(
     data => { 
       let quoteContent = data[0].content.replace(/\<p>|<\/p>/g, '');
-      console.log(data[0].title);
-      console.log(quoteContent);
       author.innerHTML = `- ${data[0].title}`;
       quote.innerHTML = quoteContent;
     })
