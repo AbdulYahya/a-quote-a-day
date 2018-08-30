@@ -5,11 +5,9 @@
   "main": "grabQuote.js",
   "scripts": {
     "bundle": "browserify grabQuote.js -0 bundle.js",
-    "build": "browserify grabQuote.js -o bundle.js; browser-sync start --server --files '*.html, **/*.js, **/*.css'"
+    "build": "browserify assets/scripts/grabQuote.js -o assets/scripts/bundle.js; browser-sync start --server --files '*.html, **/*.js, **/*.css'"
   },
-  "dependencies": {
-    "axios": "^0.18.0"
-  },
+  "dependencies": {},
   "devDependencies": {
     "browser-sync": "^2.24.7",
     "browserify": "^16.2.2"
