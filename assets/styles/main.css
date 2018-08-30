@@ -14,20 +14,21 @@ body {
   font-size: 100%;
   letter-spacing: 0.06em;
   margin: 0;
-  min-height: 100%;
   overflow-x: auto;
 }
 
 main {
   display: grid;
   align-content: center;
-  min-height: 100vh;
+  height: 100vh;
   overflow-x: auto;
 }
 
 .wrapper {
   display: grid;
+  height: 100%;
   margin: 0 3em 0 3em;
+  overflow-x: auto;
 }
 
 .author {
