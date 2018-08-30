@@ -52,6 +52,27 @@
                        ((100vw - (var(--startwidth) * 1em)) / (var(--endwidth) - var(--startwidth))));
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Monserrat', Fallback, sans-serif;
+  font-style: normal;
+  font-weight: 300;
+}
+
+@media screen and (min-width: 10em) {
+  h2 {
+    --margin-min: 0.65625em;
+    --margin-max: 1.875em;
+    --lineheight-min: 2.4375em;
+    --lineheight-max: 5.625em;
+    font-size: var(--h2-responsive);
+  }
+}
+
 @media screen and (min-width: 30em) {
   h1,
   h2,
